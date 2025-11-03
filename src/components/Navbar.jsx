@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Menu, X, Sparkles } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const Navbar = ({ scrollY }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,11 +23,16 @@ const Navbar = ({ scrollY }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2 group">
+          <a href="#home" className="flex items-center space-x-3 group">
             <div className="relative">
-              <div className="absolute inset-0 blur-xl bg-primary-400 opacity-50 group-hover:opacity-75 transition-opacity" />
+              <img 
+                src="/brainbounty.png" 
+                alt="BrainBounty Logo" 
+                className="w-10 h-10 md:w-12 md:h-12 transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 blur-xl bg-primary-400 opacity-0 group-hover:opacity-50 transition-opacity" />
             </div>
-            <span className="text-2xl font-bold text-gradient">BrainBounty</span>
+            <span className="text-xl md:text-2xl font-bold text-gradient">BrainBounty</span>
           </a>
 
           {/* Desktop Menu */}
